@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <script src="vue.js" charset="utf-8"></script>
+    <script src="vue-router.js" charset="utf-8"></script>
+    <style media="screen">
+    .nav-link {color:#333; text-decoration:none;}
+    .router-link-active {font-weight:bold;}
+    </style>
+</head>
+<body>
+	<div id="div1">
+		<!--router-link是一个组件  ,其实就是一个a链接-->
+		<router-link class="nav-link" to="/company">卖家平台</router-link>
+		<router-link class="nav-link" to="/user">买家平台</router-link>
+		<!--router-view是一个占位符-->
+		<router-view></router-view>
+	</div>
+</body>
+    <script src="./dest/bundle.js" charset="utf-8"></script>
+</html>

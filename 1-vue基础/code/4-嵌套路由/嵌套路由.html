@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>路由参数</title>
+    <script src="../vue.js" charset="utf-8"></script>
+    <script src="../vue-router.js" charset="utf-8"></script>
+    <style media="screen">
+    .nav-link {color:#333; text-decoration:none;}
+    .router-link-active {font-weight:bold;}
+    </style>
+</head>
+<body>
+	<div id="div1">
+		<router-link class="nav-link" to="/user/info">用户信息</router-link>
+		<router-link class="nav-link" to="/user/avatar">修改头像</router-link>
+		<router-link class="nav-link" to="/company/update">更新公司信息</router-link>
+		<router-link class="nav-link" to="/company/show">公司展示</router-link>
+		<router-view></router-view>
+	</div>
+
+</body>
+<script type="text/javascript">
+	let router = new VueRouter({
+		routes:[
+		{
+			path:'/user',
+			component:{
+				template:'<div><h4>用户信息</h4><router-view></router-view></div>'
+			},
+			children:[
+			{
+				path:'info',
+				component:{
+					template:'<span>用户</span>'
+				}
+			},
+			{
+				path:'avatar',
+				component:{
+					template:'<span>头像</span>'
+				}
+			}
+			]
+		},
+		{
+			path:'/company',
+			component:{
+				template:'<div><h4>公司信息</h4><router-view></router-view></div>'
+			},
+			children:[
+			{
+				path:'update',
+				component:{
+					template:'<span>修改公司信息</span>'
+				}
+			},
+			{
+				path:'show',
+				component:{
+					template:'<span>显示</span>'
+				}
+			}
+			]
+		}
+		]
+	})
+
+	new Vue({
+		el:'#div1',
+		router
+	})
+
+</script>
+</html>

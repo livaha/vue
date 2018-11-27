@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>路由参数</title>
+    <script src="../vue.js" charset="utf-8"></script>
+    <script src="../vue-router.js" charset="utf-8"></script>
+    <style media="screen">
+    .nav-link {color:#333; text-decoration:none;}
+    .router-link-active {font-weight:bold;}
+    </style>
+</head>
+<body>
+	<div id="div1">
+		<router-link class="nav-link" to="/article/1">文章1</router-link>
+		<router-link class="nav-link" to="/article/2">文章2</router-link>
+		<router-link class="nav-link" to="/article/3">文章3</router-link>
+		<router-view></router-view>
+	</div>
+
+</body>
+<script type="text/javascript">
+	let router = new VueRouter({
+		routes:[
+		{
+			path:'/article/:id',
+			component:{
+				template:'<div>文章ID：{{$route.params.id}}</div>'
+			}
+		}]
+	})
+
+	new Vue({
+		el:'#div1',
+		router,
+		watch:{
+			$route(newVal,oldVal){
+				console.log('from',oldVal)
+				console.log('to',newVal)
+			}
+		}
+	})
+</script>
+</html>
