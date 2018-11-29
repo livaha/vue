@@ -4,7 +4,7 @@ webpack使用：
 
 
 
-**先通过查找vue-loader官方文档了解vue文件的写法**
+
 
 #### vue单文件方式
 
