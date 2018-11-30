@@ -18,10 +18,7 @@
    </div>
 </template>
 <script>
-// class 取一个 返回一个字符串
-// 取多个  返回一个对象
-// 一个学生列表  每个人都有成绩 AB，根据当前学生的成绩匹配显示不同的颜色
-// A-red B-green
+
     export default {
         data(){
             return {
