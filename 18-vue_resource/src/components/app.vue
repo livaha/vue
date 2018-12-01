@@ -20,7 +20,7 @@
             
             //post请求
             this.$http.post('http://182.254.146.100:8899/api/postcomment/300',{
-                content:'传智27期，霸气的一批'
+                content:'霸气'
             },{
                 emulateJSON:true
             })
