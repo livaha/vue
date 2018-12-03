@@ -10,6 +10,7 @@
                 data:[]
             }
         },created(){
+            //get请求
             // console.log(this.$http);
             // this.$http.get('http://182.254.146.100:8899/api/getlunbo')
             // .then(res=>{
@@ -33,16 +34,5 @@
     }
 </script>
 <style scoped>
-    .h{
-        height: 100px;
-        background-color: yellowgreen;
-    }
-    .b{
-        height: 100px;
-        background-color: skyblue;
-    }
-    .f{
-        height: 100px;
-        background-color: hotpink;
-    }
+
 </style>

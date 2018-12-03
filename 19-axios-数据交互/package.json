@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "webpack",
+    "server": "..\\node_modules\\.bin\\webpack-dev-server --open"
+  },
+  "dependencies": {
+    "mint-ui": "^2.2.13"
+  }
+}
