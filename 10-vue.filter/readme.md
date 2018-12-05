@@ -36,14 +36,14 @@
 其中
         显示：{{text | myFilter}}
 text就是要过滤的值。
-` filters:{
+ filters:{
       myFilter:function(value){
     //这里面的value就是要过滤的text；
     //下面为返回过滤后被反转的值
         return value.split('').reverse().join('')
-    }`
+    }
     
-
+`
 
 ### [Vue.filter( id, [definition\] )](https://vuejs.org/v2/api/#Vue-filter)
 
