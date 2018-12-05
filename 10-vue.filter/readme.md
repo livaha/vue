@@ -1,3 +1,50 @@
+过滤器是option的一个属性，
+`<template>
+    <div>
+
+        请输入内容
+        <input type="text" name="" v-model="text">
+        显示：{{text | myFilter}}
+        
+        <!-- 测试组件的范围 -->
+        <sub-vue></sub-vue>
+
+    </div>
+</template>
+<script>
+  import subVue from './components/sub.vue'
+  export default{
+    data(){
+      return{
+        text:''
+      }
+    },
+    filters:{
+      myFilter:function(value){
+        //就是-> text
+        //输入的内容帮我做一个反转
+        //转换成数组，反转数组，转换成字符串
+        return value.split('').reverse().join('')
+      }
+    },
+    components:{
+      subVue:subVue
+    }
+  }
+</script>
+
+其中
+        显示：{{text | myFilter}}
+text就是要过滤的值。
+` filters:{
+      myFilter:function(value){
+    //这里面的value就是要过滤的text；
+    //下面为返回过滤后被反转的值
+        return value.split('').reverse().join('')
+    }`
+    
+
+
 ### [Vue.filter( id, [definition\] )](https://vuejs.org/v2/api/#Vue-filter)
 
 - **Arguments:**
