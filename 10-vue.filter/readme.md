@@ -1,5 +1,6 @@
 过滤器是option的一个属性，
-`<template>
+```
+<template>
     <div>
 
         请输入内容
@@ -43,7 +44,7 @@ text就是要过滤的值。
         return value.split('').reverse().join('')
     }
     
-`
+```
 
 ### [Vue.filter( id, [definition\] )](https://vuejs.org/v2/api/#Vue-filter)
 
